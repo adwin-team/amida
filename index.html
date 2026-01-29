@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmidaGo! - プレミアムあみだくじ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Amida<span>Go!</span></h1>
+            <p>シンプルでモダンなあみだくじ体験</p>
+        </header>
+
+        <section class="settings-card">
+            <div class="input-group">
+                <label for="participant-count">参加人数</label>
+                <input type="number" id="participant-count" min="2" max="20" value="5">
+            </div>
+
+            <div class="goals-container" id="goals-container">
+                <!-- JavaScriptで生成されるゴール入力欄 -->
+            </div>
+
+            <div class="button-group">
+                <button id="generate-btn" class="primary-btn">あみだを生成</button>
+                <button id="reset-btn" class="secondary-btn">リセット</button>
+            </div>
+        </section>
+
+        <section class="canvas-container">
+            <div class="amida-wrapper" id="amida-wrapper">
+                <canvas id="amida-canvas"></canvas>
+                <div id="start-buttons" class="start-buttons-overlay">
+                    <!-- JavaScriptでスタートボタンを配置 -->
+                </div>
+            </div>
+        </section>
+
+        <section class="result-card" id="result-card">
+            <div class="result-content">
+                <p class="result-placeholder">スタートを選択して結果を確認してください</p>
+                <div id="result-display" style="display: none;">
+                    <span class="user-name"></span>
+                    <span class="arrow">→</span>
+                    <span class="goal-text"></span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
